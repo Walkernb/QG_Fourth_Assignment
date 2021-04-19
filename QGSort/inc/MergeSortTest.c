@@ -1,3 +1,7 @@
+/**
+*   å½’å¹¶æ’åºçš„å¤§æ•°æ®é‡æµ‹è¯•
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
@@ -62,7 +66,7 @@ void MergeArray(int *a,int begin,int mid,int end,int *temp)
 
 }
 
-void MergeMinTest()            //²âÊÔ10000Êı¾İÁ¿
+void MergeMinTest()            //æµ‹è¯•10000æ•°æ®é‡
 {
     int *temp;
     srand((unsigned int)time(0));
@@ -75,11 +79,11 @@ void MergeMinTest()            //²âÊÔ10000Êı¾İÁ¿
     clock_t finish=clock();
     if(isSorted(b,min))
         printf("%lf ms\n",(double)(finish-start));
-    else    printf("ÅÅĞòÊ§°Ü£¡\n");
+    else    printf("æ’åºå¤±è´¥ï¼\n");
     //for(int i=min-50;i<min;i++)  printf("%d\n",b[i]);
 }
 
-void MergeMidTest()            //²âÊÔ50000Êı¾İÁ¿
+void MergeMidTest()            //æµ‹è¯•50000æ•°æ®é‡
 {
     int *temp;
     srand((unsigned int)time(0));
@@ -92,7 +96,7 @@ void MergeMidTest()            //²âÊÔ50000Êı¾İÁ¿
     clock_t finish=clock();
     if(isSorted(b,Mid))
         printf("%lf ms\n",(double)(finish-start));
-    else    printf("ÅÅĞòÊ§°Ü£¡\n");
+    else    printf("æ’åºå¤±è´¥ï¼\n");
     //for(int i=Mid-50;i<Mid;i++)  printf("%d\n",b[i]);
 }
 
@@ -109,7 +113,7 @@ void MergeMaxTest()
     clock_t finish=clock();
     if(isSorted(b,max))
         printf("%lf ms\n",(double)(finish-start));
-    else    printf("ÅÅĞòÊ§°Ü£¡\n");
+    else    printf("æ’åºå¤±è´¥ï¼\n");
     //for(int i=max-50;i<max;i++)  printf("%d\n",b[i]);
 }
 
@@ -118,12 +122,12 @@ void MergeTest()
     char b[20];
     clock_t start,finish;
     srand((unsigned int)time(0));
-    printf("1       ²âÊÔ10000Êı¾İÁ¿\n");
-    printf("2       ²âÊÔ50000Êı¾İÁ¿\n");
-    printf("3       ²âÊÔ200000Êı¾İÁ¿\n");
-    printf("ÇëÊäÈëÄãµÄÑ¡Ôñ£º");
+    printf("1       æµ‹è¯•10000æ•°æ®é‡\n");
+    printf("2       æµ‹è¯•50000æ•°æ®é‡\n");
+    printf("3       æµ‹è¯•200000æ•°æ®é‡\n");
+    printf("è¯·è¾“å…¥ä½ çš„é€‰æ‹©ï¼š");
     scanf("%s",b);
-    if(strlen(b)>1) printf("ÊäÈë´íÎó£¡");
+    if(strlen(b)>1) printf("è¾“å…¥é”™è¯¯ï¼");
     else
     {
         int i=b[0]-'0';
@@ -132,7 +136,7 @@ void MergeTest()
             case 1:MergeMinTest();break;
             case 2:MergeMidTest();break;
             case 3:MergeMaxTest();break;
-            default:printf("ÊäÈëµÄÑ¡Ôñ²»ÔÚ·¶Î§ÄÚ£¡\n");
+            default:printf("è¾“å…¥çš„é€‰æ‹©ä¸åœ¨èŒƒå›´å†…ï¼\n");
         }
     }
 }
