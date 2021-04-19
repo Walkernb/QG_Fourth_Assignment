@@ -1,3 +1,7 @@
+/**
+*   100*100Kæµ‹è¯•
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
@@ -32,12 +36,12 @@ void Test2()
         if(isSorted(a,N))   sum+=(finish-start);
         else
         {
-            printf("²åÈëÅÅĞòÊ§°Ü£¡\n");
+            printf("æ’å…¥æ’åºå¤±è´¥ï¼\n");
             return ;
         }
         j++;
     }
-    printf("²åÈëÅÅĞòÓÃÊ±£º%lf ms\n",(double)sum);
+    printf("æ’å…¥æ’åºç”¨æ—¶ï¼š%lf ms\n",(double)sum);
     sum=0;
     j=0;
 
@@ -52,12 +56,12 @@ void Test2()
         if(isSorted(a,N))   sum+=(finish-start);
         else
         {
-            printf("¹é²¢ÅÅĞòÊ§°Ü£¡\n");
+            printf("å½’å¹¶æ’åºå¤±è´¥ï¼\n");
             return ;
         }
         j++;
     }
-    printf("¹é²¢ÅÅĞòÓÃÊ±£º%lf ms\n",(double)sum);
+    printf("å½’å¹¶æ’åºç”¨æ—¶ï¼š%lf ms\n",(double)sum);
     sum=0;
     j=0;
 
@@ -71,12 +75,12 @@ void Test2()
         if(isSorted(a,N))   sum+=(finish-start);
         else
         {
-            printf("¿ìËÙÅÅĞòÊ§°Ü£¡\n");
+            printf("å¿«é€Ÿæ’åºå¤±è´¥ï¼\n");
             return ;
         }
         j++;
     }
-    printf("¿ìËÙÅÅĞòÓÃÊ±£º%lf ms\n",(double)sum);
+    printf("å¿«é€Ÿæ’åºç”¨æ—¶ï¼š%lf ms\n",(double)sum);
     sum=0;
     j=0;
 
@@ -90,12 +94,12 @@ void Test2()
         if(isSorted(a,N))   sum+=(finish-start);
         else
         {
-            printf("¿ìËÙÅÅĞò(ÊàÖá´æ·Å)Ê§°Ü£¡\n");
+            printf("å¿«é€Ÿæ’åº(æ¢è½´å­˜æ”¾)å¤±è´¥ï¼\n");
             return ;
         }
         j++;
     }
-    printf("¿ìËÙÅÅĞò(ÊàÖá´æ·Å)ÓÃÊ±£º%lf ms\n",(double)sum);
+    printf("å¿«é€Ÿæ’åº(æ¢è½´å­˜æ”¾)ç”¨æ—¶ï¼š%lf ms\n",(double)sum);
     sum=0;
     j=0;
 
@@ -109,12 +113,12 @@ void Test2()
         if(isSorted(a,N))   sum+=(finish-start);
         else
         {
-            printf("»ùÊı¼ÆÊıÅÅĞòÊ§°Ü£¡\n");
+            printf("åŸºæ•°è®¡æ•°æ’åºå¤±è´¥ï¼\n");
             return ;
         }
         j++;
     }
-    printf("»ùÊı¼ÆÊıÅÅĞòÓÃÊ±£º%lf ms\n",(double)sum);
+    printf("åŸºæ•°è®¡æ•°æ’åºç”¨æ—¶ï¼š%lf ms\n",(double)sum);
     sum=0;
     j=0;
 
@@ -128,12 +132,12 @@ void Test2()
         if(isSorted(a,N))   sum+=(finish-start);
         else
         {
-            printf("¼ÆÊıÅÅĞòÊ§°Ü£¡\n");
+            printf("è®¡æ•°æ’åºå¤±è´¥ï¼\n");
             return ;
         }
         j++;
     }
-    printf("¼ÆÊıÅÅĞòÓÃÊ±£º%lf ms\n",(double)sum);
+    printf("è®¡æ•°æ’åºç”¨æ—¶ï¼š%lf ms\n",(double)sum);
     sum=0;
     j=0;
 
@@ -147,12 +151,12 @@ void Test2()
         if(isSorted(a,N))   sum+=(finish-start);
         else
         {
-            printf("¼ÆÊıÅÅĞòÊ§°Ü£¡\n");
+            printf("è®¡æ•°æ’åºå¤±è´¥ï¼\n");
             return ;
         }
         j++;
     }
-    printf("¿ìËÙÅÅĞò(·Çµİ¹é)ÓÃÊ±£º%lf ms\n",(double)sum);
+    printf("å¿«é€Ÿæ’åº(éé€’å½’)ç”¨æ—¶ï¼š%lf ms\n",(double)sum);
     sum=0;
     j=0;
 }
