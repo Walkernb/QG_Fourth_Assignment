@@ -1,3 +1,7 @@
+/**
+*åº”ç”¨æ’åºç®—æ³•
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
@@ -18,15 +22,15 @@ int FindMid(int *a,int left,int right)
     return left;
 }
 
-void GetNumber()               //ÕÒµÚK´óµÄÊı
+void GetNumber()               //æ‰¾ç¬¬Kå¤§çš„æ•°
 {
-    printf("ÇëÊäÈëÊı×éµÄ³¤¶È£º");
+    printf("è¯·è¾“å…¥æ•°ç»„çš„é•¿åº¦ï¼š");
     int size;
     scanf("%d",&size);
-    printf("ÇëÊäÈëÊı×é£º");
+    printf("è¯·è¾“å…¥æ•°ç»„ï¼š");
     int a[size];
     for(int j=0;j<size;j++) scanf("%d",&a[j]);
-    printf("ÇëÊäÈëÒª²éÕÒÊı×ÖµÄÎ»ÖÃ£º");
+    printf("è¯·è¾“å…¥è¦æŸ¥æ‰¾æ•°å­—çš„ä½ç½®ï¼š");
     int n;
     scanf("%d",&n);
 
@@ -45,16 +49,16 @@ void GetNumber()               //ÕÒµÚK´óµÄÊı
             i=FindMid(a,l,r-1);
         }
     }
-    printf("No.%d£º%d\n",n,a[i]);
+    printf("No.%dï¼š%d\n",n,a[i]);
 }
 
 
 void ColorSort()
 {
-    printf("³ÌĞò½«Ëæ»úÉú³ÉÖ¸¶¨³¤¶ÈµÄÊı×é,ÇëÊäÈëÊı×é³¤¶È£º");
+    printf("ç¨‹åºå°†éšæœºç”ŸæˆæŒ‡å®šé•¿åº¦çš„æ•°ç»„,è¯·è¾“å…¥æ•°ç»„é•¿åº¦ï¼š");
     int size;
     scanf("%d",&size);
-    printf("Ëæ»úÉú³ÉµÄÊı×é£º");
+    printf("éšæœºç”Ÿæˆçš„æ•°ç»„ï¼š");
 
     int a[size+1];
     srand((unsigned int)time(0));
@@ -77,7 +81,7 @@ void ColorSort()
         if(a[p]==0&&p>p1)     k=a[p1],    a[p1]=a[p],     a[p]=k,     p1++;
         if(a[p]==2)     k=a[p2],    a[p2]=a[p],     a[p]=k,     p2--;
     }
-    printf("¾­¹ıÅÅĞòºóµÄÊı×é£º");
+    printf("ç»è¿‡æ’åºåçš„æ•°ç»„ï¼š");
     for(int i=0;i<size;i++)
     {
         printf("%d ",a[i]);
@@ -90,13 +94,13 @@ void AppliySort()
 {
     int n;
     char c[20];
-    printf("1       ÑÕÉ«ÅÅĞò\n");
-    printf("2       ÕÒµ½µÚK´óÊı\n");
-    printf("ÇëÊäÈëÄãµÄÑ¡Ôñ£º");
+    printf("1       é¢œè‰²æ’åº\n");
+    printf("2       æ‰¾åˆ°ç¬¬Kå¤§æ•°\n");
+    printf("è¯·è¾“å…¥ä½ çš„é€‰æ‹©ï¼š");
     scanf("%s",c);
     if(strlen(c)>1)
     {
-        printf("ÊäÈëÓĞÎó£¡\n");
+        printf("è¾“å…¥æœ‰è¯¯ï¼\n");
         return ;
     }
     else
@@ -106,7 +110,7 @@ void AppliySort()
         {
             case 1:ColorSort() ;break;
             case 2:GetNumber() ;break;
-            default:printf("ÊäÈë²»ÔÚ·¶Î§ÄÚ£¡\n");
+            default:printf("è¾“å…¥ä¸åœ¨èŒƒå›´å†…ï¼\n");
         }
     }
 }
