@@ -22,7 +22,7 @@ void  MergeSort(int *a,int begin,int mid,int end,int *temp)
             temp=(int *)malloc(sizeof(int));
             *temp=a[begin];
             a[begin]=a[end];
-            a[end]=*temp;
+            a[end]=*temp; 
             free(temp);
         }
         return ;
