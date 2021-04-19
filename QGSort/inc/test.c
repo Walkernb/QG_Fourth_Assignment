@@ -1,3 +1,6 @@
+/**
+*   å¤§æ•°æ®é‡æµ‹è¯•çš„è°ƒç”¨
+*/
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -20,30 +23,30 @@ void interFace()
     for(i=0;i<40;i++)   printf("*");    printf("\n");
 
     for(i=0;i<35;i++)   printf(" ");    printf("*");
-    printf("     1        ²åÈëÅÅĞò                ");     printf("*\n");
+    printf("     1        æ’å…¥æ’åº                ");     printf("*\n");
 
     for(i=0;i<35;i++)   printf(" ");    printf("*");
-    printf("     2        ¹é²¢ÅÅĞò                ");     printf("*\n");
+    printf("     2        å½’å¹¶æ’åº                ");     printf("*\n");
 
     for(i=0;i<35;i++)   printf(" ");    printf("*");
-    printf("     3        ¿ìËÙÅÅĞò                ");     printf("*\n");
+    printf("     3        å¿«é€Ÿæ’åº                ");     printf("*\n");
 
     for(i=0;i<35;i++)   printf(" ");    printf("*");
-    printf("     4        ¿ìËÙÅÅĞò(ÊàÖá´æ·Å)      ");     printf("*\n");
+    printf("     4        å¿«é€Ÿæ’åº(æ¢è½´å­˜æ”¾)      ");     printf("*\n");
 
     for(i=0;i<35;i++)   printf(" ");    printf("*");
-    printf("     5        ¿ìËÙÅÅĞò(·Çµİ¹é)        ");     printf("*\n");
+    printf("     5        å¿«é€Ÿæ’åº(éé€’å½’)        ");     printf("*\n");
 
     for(i=0;i<35;i++)   printf(" ");    printf("*");
-    printf("     6        ¼ÆÊıÅÅĞò                ");     printf("*\n");
+    printf("     6        è®¡æ•°æ’åº                ");     printf("*\n");
 
     for(i=0;i<35;i++)   printf(" ");    printf("*");
-    printf("     7        »ùÊı¼ÆÊıÅÅĞò            ");     printf("*\n");
+    printf("     7        åŸºæ•°è®¡æ•°æ’åº            ");     printf("*\n");
 
     for(i=0;i<35;i++)   printf(" ");
     for(i=0;i<40;i++)   printf("*");    printf("\n");
 
-    printf("ÇëÊäÈëÄãµÄÑ¡Ôñ£º");
+    printf("è¯·è¾“å…¥ä½ çš„é€‰æ‹©ï¼š");
 }
 
 void Test()
@@ -52,7 +55,7 @@ void Test()
     char c[20];
     interFace();
     scanf("%s",c);
-    if(strlen(c)>1) printf("ÊäÈëÓĞÎó£¡\n");
+    if(strlen(c)>1) printf("è¾“å…¥æœ‰è¯¯ï¼\n");
     else
     {
         int n=c[0]-'0';
@@ -65,7 +68,7 @@ void Test()
             case 5:QR_Test();break;
             case 6:CountTest();break;
             case 7:RadixCountTest();break;
-            default:printf("ÊäÈëµÄÑ¡Ôñ²»ÔÚ·¶Î§ÄÚ£¡\n");
+            default:printf("è¾“å…¥çš„é€‰æ‹©ä¸åœ¨èŒƒå›´å†…ï¼\n");
         }
     }
 }
