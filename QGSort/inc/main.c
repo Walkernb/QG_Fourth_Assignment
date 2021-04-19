@@ -1,5 +1,5 @@
 /**
-*   ÑÕÉ«ÅÅĞò²»ÎÈ¶¨£¬ÔÚ´óÊı¾İÁ¿ÏÂ»á³ö´í¡£
+*   é¢œè‰²æ’åºä¸ç¨³å®šï¼Œåœ¨å¤§æ•°æ®é‡ä¸‹ä¼šå‡ºé”™ã€‚
 */
 #include<stdio.h>
 #include<stdlib.h>
@@ -7,7 +7,7 @@
 #include<string.h>
 
 
-int isSorted(int a[],int n)
+int isSorted(int a[],int n)                 //åˆ¤æ–­æ•°ç»„æ˜¯å¦æœ‰åº
 {
     for(int i=1;i<n;i++)
         if(a[i-1]>a[i]) return 0;
@@ -15,9 +15,9 @@ int isSorted(int a[],int n)
 }
 
 extern void MainInterFace();
-extern void Test();
-extern void Test2();
-extern void AppliySort();
+extern void Test();                 //å¤§æ•°æ®é‡æµ‹è¯•
+extern void Test2();                //100*100kæµ‹è¯•
+extern void AppliySort();           //æ’åºçš„åº”ç”¨
 
 int main()
 {
@@ -28,7 +28,7 @@ int main()
     {
         MainInterFace();
         scanf("%s",c);
-        if(strlen(c)>1) printf("ÊäÈëÓĞÎó£¡\n");
+        if(strlen(c)>1) printf("è¾“å…¥æœ‰è¯¯ï¼\n");
         else
         {
             int n=c[0]-'0';
@@ -38,7 +38,7 @@ int main()
                 case    2: Test2();break;
                 case    3: AppliySort();break;
                 case    0:p=0;break;
-                default:printf("ÊäÈëµÄÑ¡Ôñ²»ÔÚ·¶Î§ÄÚ£¡\n");
+                default:printf("è¾“å…¥çš„é€‰æ‹©ä¸åœ¨èŒƒå›´å†…ï¼\n");
             }
         }
     }
