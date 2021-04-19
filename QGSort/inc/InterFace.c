@@ -1,3 +1,7 @@
+/**
+*   ç”¨æˆ·ç•Œé¢
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
@@ -11,26 +15,26 @@ void MainInterFace()
 
     for(i=0;i<35;i++)   printf(" ");
     printf("**");
-    printf("    1       ´óÁ¿Êı¾İ²âÊÔÅÅĞò        ");
+    printf("    1       å¤§é‡æ•°æ®æµ‹è¯•æ’åº        ");
     printf("**\n");
 
     for(i=0;i<35;i++)   printf(" ");
     printf("**");
-    printf("    2       100Êı¾İ*100k´Î²âÊÔ      ");
+    printf("    2       100æ•°æ®*100kæ¬¡æµ‹è¯•      ");
     printf("**\n");
 
     for(i=0;i<35;i++)   printf(" ");
     printf("**");
-    printf("    3       ÅÅĞòµÄÓ¦ÓÃ              ");
+    printf("    3       æ’åºçš„åº”ç”¨              ");
     printf("**\n");
 
     for(i=0;i<35;i++)   printf(" ");
     printf("**");
-    printf("    0       ÍË³ö                    ");
+    printf("    0       é€€å‡º                    ");
     printf("**\n");
 
     for(i=0;i<35;i++)   printf(" ");
     for(i=0;i<40;i++)   printf("*");    printf("\n");
 
-    printf("ÇëÊäÈëÄãµÄÑ¡Ôñ£º");
+    printf("è¯·è¾“å…¥ä½ çš„é€‰æ‹©ï¼š");
 }
