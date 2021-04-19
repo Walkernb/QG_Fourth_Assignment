@@ -1,3 +1,8 @@
+/**
+*   éé€’å½’å¿«é€Ÿæ’åºçš„å¤§æ•°æ®é‡æµ‹è¯•
+*/
+
+
 #include<stdio.h>
 #include<time.h>
 #include<string.h>
@@ -24,7 +29,7 @@ typedef struct Stack
     int top;
 }Stack;
 
-int GetMid(int *a, int begin, int end)          //ÕÒÖĞ¼äÊàÅ¦
+int GetMid(int *a, int begin, int end)          //æ‰¾ä¸­é—´æ¢çº½
 {
     int key=a[begin];
     while(begin<end)
@@ -70,14 +75,14 @@ void QuickSort_Recursion(int *a,int len)
 
     while(s.top>0)
     {
-        s.top--;                                //³öÕ»
+        s.top--;                                //å‡ºæ ˆ
         node=s.data;
         s.data=node->next;
         int mid=GetMid(a,node->left,node->right);
 
         if(mid-node->left>1)
         {
-            node2=(Node *)malloc(sizeof(Node));             //ÈëÕ»
+            node2=(Node *)malloc(sizeof(Node));             //å…¥æ ˆ
             node2->left=node->left;
             node2->right=mid-1;
             node2->next=s.data;
@@ -87,7 +92,7 @@ void QuickSort_Recursion(int *a,int len)
 
         if(node->right-mid>1)
         {
-            node2=(Node *)malloc(sizeof(Node));             //ÈëÕ»
+            node2=(Node *)malloc(sizeof(Node));             //å…¥æ ˆ
             node2->left=mid+1;
             node2->right=node->right;
             node2->next=s.data;
@@ -113,7 +118,7 @@ void QR_MinTest()
     clock_t finish=clock();
     if(isSorted(b,min))
         printf("%lf ms\n",(double)(finish-start));
-    else    printf("ÅÅĞòÊ§°Ü£¡\n");
+    else    printf("æ’åºå¤±è´¥ï¼\n");
     //for(int i=min-50;i<min;i++)  printf("%d\n",b[i]);
 }
 
@@ -129,7 +134,7 @@ void QR_MidTest()
     clock_t finish=clock();
     if(isSorted(b,Mid))
         printf("%lf ms\n",(double)(finish-start));
-    else    printf("ÅÅĞòÊ§°Ü£¡\n");
+    else    printf("æ’åºå¤±è´¥ï¼\n");
     //for(int i=mid-50;i<mid;i++)  printf("%d\n",b[i]);
 }
 
@@ -145,7 +150,7 @@ void QR_MaxTest()
     clock_t finish=clock();
     if(isSorted(b,max))
         printf("%lf ms\n",(double)(finish-start));
-    else    printf("ÅÅĞòÊ§°Ü£¡\n");
+    else    printf("æ’åºå¤±è´¥ï¼\n");
     //for(int i=max-50;i<max;i++)  printf("%d\n",b[i]);
 }
 
@@ -154,12 +159,12 @@ void QR_Test()
     char b[20];
     clock_t start,finish;
     srand((unsigned int)time(0));
-    printf("1       ²âÊÔ10000Êı¾İÁ¿\n");
-    printf("2       ²âÊÔ50000Êı¾İÁ¿\n");
-    printf("3       ²âÊÔ200000Êı¾İÁ¿\n");
-    printf("ÇëÊäÈëÄãµÄÑ¡Ôñ£º");
+    printf("1       æµ‹è¯•10000æ•°æ®é‡\n");
+    printf("2       æµ‹è¯•50000æ•°æ®é‡\n");
+    printf("3       æµ‹è¯•200000æ•°æ®é‡\n");
+    printf("è¯·è¾“å…¥ä½ çš„é€‰æ‹©ï¼š");
     scanf("%s",b);
-    if(strlen(b)>1) printf("ÊäÈë´íÎó£¡");
+    if(strlen(b)>1) printf("è¾“å…¥é”™è¯¯ï¼");
     else
     {
         int i=b[0]-'0';
@@ -168,7 +173,7 @@ void QR_Test()
             case 1:QR_MinTest();break;
             case 2:QR_MidTest();break;
             case 3:QR_MaxTest();break;
-            default:printf("ÊäÈëµÄÑ¡Ôñ²»ÔÚ·¶Î§ÄÚ£¡\n");
+            default:printf("è¾“å…¥çš„é€‰æ‹©ä¸åœ¨èŒƒå›´å†…ï¼\n");
         }
     }
 }
