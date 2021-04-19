@@ -1,3 +1,8 @@
+/**
+*   æ¢çº½ä¼˜åŒ–åçš„å¿«é€Ÿæ’åºçš„å¤§æ•°æ®é‡æµ‹è¯•
+*/
+
+
 #include<stdio.h>
 #include<math.h>
 #include<string.h>
@@ -9,21 +14,21 @@
 int b[max];
 extern int isSorted(int a[],int n);
 
-void QuickSort2(int *a, int begin, int end)                             //ÒÑÍ·¡¢ÖĞ¡¢Î²£¬ÈıÕß¼äµÄÖĞÎ»ÊıÎªÊàÅ¦Êı
+void QuickSort2(int *a, int begin, int end)                             //å·²å¤´ã€ä¸­ã€å°¾ï¼Œä¸‰è€…é—´çš„ä¸­ä½æ•°ä¸ºæ¢çº½æ•°
 {
     if(begin>=end)  return ;
     int low=begin,high=end,middle=(low+high)/2,key=a[middle];
-    if(a[low]<=a[middle]&&a[middle]<=a[high]||a[high]<=a[middle]&&a[middle]<a[begin])   //ÖĞ ÎªÊàÅ¦Êı
+    if(a[low]<=a[middle]&&a[middle]<=a[high]||a[high]<=a[middle]&&a[middle]<a[begin])   //ä¸­ ä¸ºæ¢çº½æ•°
     {
         int v=a[low];
         a[low]=a[middle];
         a[middle]=v;
     }
-    else    if(a[middle]<=a[begin]&&a[begin]<=a[high]||a[high]<=a[begin]&&a[begin]<=a[middle])  //Í· ÎªÊàÅ¦Êı
+    else    if(a[middle]<=a[begin]&&a[begin]<=a[high]||a[high]<=a[begin]&&a[begin]<=a[middle])  //å¤´ ä¸ºæ¢çº½æ•°
     {
         key=a[begin];
     }
-    else                                                                                     //Î²  ÎªÊàÅ¦Êı
+    else                                                                                     //å°¾  ä¸ºæ¢çº½æ•°
     {
         int v=a[high];
         a[high]=a[low];
@@ -58,7 +63,7 @@ void QuickMinTest2()
     clock_t finish=clock();
     if(isSorted(b,min))
         printf("%lf ms\n",(double)(finish-start));
-    else    printf("ÅÅĞòÊ§°Ü£¡\n");
+    else    printf("æ’åºå¤±è´¥ï¼\n");
     //for(int i=min-50;i<min;i++)  printf("%d\n",b[i]);
 }
 
@@ -74,7 +79,7 @@ void QuickMidTest2()
     clock_t finish=clock();
     if(isSorted(b,mid))
         printf("%lf ms\n",(double)(finish-start));
-    else    printf("ÅÅĞòÊ§°Ü£¡\n");
+    else    printf("æ’åºå¤±è´¥ï¼\n");
     //for(int i=mid-50;i<mid;i++)  printf("%d\n",b[i]);
 }
 
@@ -90,7 +95,7 @@ void QuickMaxTest2()
     clock_t finish=clock();
     if(isSorted(b,max))
         printf("%lf ms\n",(double)(finish-start));
-    else    printf("ÅÅĞòÊ§°Ü£¡\n");
+    else    printf("æ’åºå¤±è´¥ï¼\n");
     //for(int i=max-50;i<max;i++)  printf("%d\n",b[i]);
 }
 
@@ -100,12 +105,12 @@ void enQuickTest()
     char c[20];
     clock_t start,finish;
     srand((unsigned int)time(0));
-    printf("1       ²âÊÔ10000Êı¾İÁ¿\n");
-    printf("2       ²âÊÔ50000Êı¾İÁ¿\n");
-    printf("3       ²âÊÔ200000Êı¾İÁ¿\n");
-    printf("ÇëÊäÈëÄãµÄÑ¡Ôñ£º");
+    printf("1       æµ‹è¯•10000æ•°æ®é‡\n");
+    printf("2       æµ‹è¯•50000æ•°æ®é‡\n");
+    printf("3       æµ‹è¯•200000æ•°æ®é‡\n");
+    printf("è¯·è¾“å…¥ä½ çš„é€‰æ‹©ï¼š");
     scanf("%s",c);
-    if(strlen(c)>1) printf("ÊäÈë´íÎó£¡");
+    if(strlen(c)>1) printf("è¾“å…¥é”™è¯¯ï¼");
     else
     {
         int i=c[0]-'0';
@@ -114,7 +119,7 @@ void enQuickTest()
             case 1:QuickMinTest2();break;
             case 2:QuickMidTest2();break;
             case 3:QuickMaxTest2();break;
-            default:printf("ÊäÈëµÄÑ¡Ôñ²»ÔÚ·¶Î§ÄÚ£¡\n");
+            default:printf("è¾“å…¥çš„é€‰æ‹©ä¸åœ¨èŒƒå›´å†…ï¼\n");
         }
     }
 }
